@@ -2,6 +2,20 @@ html, body{
   overflow-x: hidden;
   min-width: 100vw;
 }
+.infinite-gradient{
+  background: linear-gradient(to right, #6f00ff 20%, rgb(68, 0, 255) 40%, rgb(0, 8, 255) 60%, #7700ff 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: infinite-gradient 2s linear infinite;
+}
+@keyframes infinite-gradient {
+  to {
+    background-position: 200% center;
+  }
+}
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -17,4 +31,3 @@ html, body{
   border-radius: 8px;
   background-color: #363636;
 }
-/*        ScrollBar 3    */

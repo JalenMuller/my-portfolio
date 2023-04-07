@@ -1,6 +1,6 @@
 export const pages = {
   aboutMe: {
-    name: "About Me",
+    name: "About",
     url: "/",
   },
   projects: {

@@ -8,7 +8,7 @@ import Skills from "./pages/Skills";
 function App() {
   return (
     <>
-      <div className="min-h-full">
+      <div className="h-full">
         <Router>
           <NavBar />
           <Routes>

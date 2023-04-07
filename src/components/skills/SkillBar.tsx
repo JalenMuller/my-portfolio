@@ -1,14 +1,43 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
-function SkillBar() {
+function SkillBar(props: { data: { title: string; rating: number } }) {
+  const skill = props.data;
+  const [percentage, setPercentage] = useState(0);
+  const targetPercentage = skill.rating * 10;
+  let pct = 0;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      pct++;
+      //   if variable pct is below target, increase state. Else, clear interval.
+      //   done this way because getting percentage value from state will give an unupdated number
+      if (pct >= targetPercentage) {
+        clearInterval(interval);
+      } else {
+        setPercentage((percentage) => percentage + 1);
+      }
+      //   randomized speed/interval because it looks better
+    }, Math.floor(Math.random() * 10));
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
-      <h3 className="text-lg mb-2 text-zinc-300">JavaScript</h3>
-      <div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div
-          className="bg-blue-600 h-2.5 rounded-full"
-          style={{ width: "45%" }}
-        ></div>
+      <div className="w-80">
+        <dl>
+          <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            {skill.title}
+          </dt>
+          <dd className="flex items-center mb-3">
+            <div className="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+              <div
+                className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                style={{ width: `${percentage}%` }}
+              ></div>
+            </div>
+            <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              {skill.rating}
+            </span>
+          </dd>
+        </dl>
       </div>
     </>
   );
