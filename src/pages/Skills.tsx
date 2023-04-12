@@ -14,7 +14,8 @@ function Skills() {
           I've tried to rate my skills as honestly as possible. I am still
           learning and I believe you are never truly perfect at something.
           However, I always strive to be and my ambition is of course to improve
-          these skills.
+          these skills. Click on more info for a detailed description and
+          screenshots for each project.
         </p>
         {mySkills.map((skillGroup) => (
           <div className="mb-5">

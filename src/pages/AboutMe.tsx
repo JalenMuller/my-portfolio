@@ -4,13 +4,13 @@ import { Github, Linkedin, Twitter, Instagram } from "react-bootstrap-icons";
 
 function AboutMe() {
   return (
-    <Page>
+    <Page className="flex flex-col items-center justify-start md:justify-center w-screen h-screen bg-zinc-800">
       <div className="container bg-transparent text-white md:max-w-screen-md p-5 overflow-hidden sm:rounded-lg">
         <div className="flex justify-between items-center mb-3">
           <h1 className="text-4xl font-bold">About me</h1>
           <img
-            src={Avatar}
-            className="w-16 mr-3 rounded-full border-2 border-white bg-slate-200"
+            src="images/bio_picture.jpg"
+            className="w-16 md:w-16 mr-3 rounded-full border-2 border-white bg-slate-200"
             alt=""
           />
         </div>
@@ -25,11 +25,11 @@ function AboutMe() {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <div className="flex">
-          <Instagram className="text-3xl mr-3" />
-          <Twitter className="text-3xl mr-3" />
-          <Github className="text-3xl mr-3" />
-          <Linkedin className="text-3xl" />
+        <div className="flex text-3xl">
+          <Instagram className="mr-3" />
+          <Twitter className="mr-3" />
+          <Github className="mr-3" />
+          <Linkedin className="" />
         </div>
       </div>
     </Page>

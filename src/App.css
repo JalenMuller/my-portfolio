@@ -1,6 +1,7 @@
 html, body{
   overflow-x: hidden;
   min-width: 100vw;
+  background-color: rgb(39 39 42);
 }
 .infinite-gradient{
   background: linear-gradient(to right, #6f00ff 20%, rgb(68, 0, 255) 40%, rgb(0, 8, 255) 60%, #7700ff 80%);
@@ -30,4 +31,8 @@ html, body{
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #363636;
+}
+.test{
+  width: 100%;
+  padding-top: 100%;
 }

@@ -1,11 +1,24 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const userLang = navigator.language;
+    switch (userLang) {
+      case "nl" || "nl-BE":
+        localStorage.setItem("lang", "nl");
+        break;
+
+      default:
+        localStorage.setItem("lang", "en");
+        break;
+    }
+  });
   return (
     <>
       <div className="h-full">
