@@ -5,7 +5,7 @@ import SkillBar from "../components/skills/SkillBar";
 function Skills() {
   return (
     <Page className="min-w-screen overflow-y-hidden bg-zinc-800 pt-24">
-      <div className="mx-5 md:mx-7 text-white md:w-1/2">
+      <div className="mx-5 md:mx-7 text-white md:w-2/3">
         <h1 className="text-4xl font-bold mb-3">My skills</h1>
         <p className="text-lg text-zinc-200 mb-1">
           What can I do for you or your company?
