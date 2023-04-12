@@ -1,7 +1,6 @@
 import { pages } from "../../data/pages";
 import { Link, useLocation } from "react-router-dom";
 import LangString from "../LangString";
-import LanguagePicker from "./LanguagePicker";
 function NavBar() {
   let location = useLocation();
   let navLinks: any[] = [];
@@ -22,26 +21,20 @@ function NavBar() {
   });
   return (
     <>
-      <div className="mx-auto w-full mt-4 md:max-w-7xl md:px-8 lg:px-10 bg-zinc-800">
-        <div className="flex h-10 items-center justify-around md:justify-center">
-          <Link
-            to={pages.aboutMe.url}
-            className="hidden md:block mr-auto text-white"
-          >
+      <div className="absolute mx-auto w-full mt-4 md:max-w-7xl md:px-8 lg:px-10 bg-zinc-800">
+        <div className="flex h-10 items-center justify-around">
+          <Link to={pages.aboutMe.url} className="hidden md:block text-white">
             <span className="font-light">Jalen </span>
             <span className="font-black text-purple-500">Muller</span>
           </Link>
-          {/* <img
-            src="images/bio_picture.jpg"
-            className="h-12 w-12 mr-3 rounded-full border-2 border-white bg-slate-200"
-            alt=""
-          /> */}
-          <div className="flex h-full items-center md:mr-auto">
+          <Link to={pages.aboutMe.url} className="md:hidden text-white">
+            <span className="font-semibold text-2xl text-purple-500">JM</span>
+          </Link>
+          <div className="flex h-full items-center md:mx-auto">
             <div className="flex h-full  items-center space-x-4 bg-zinc-900 rounded-full px-4 border border-zinc-600">
               {navLinks}
             </div>
           </div>
-          <LanguagePicker />
         </div>
       </div>
     </>

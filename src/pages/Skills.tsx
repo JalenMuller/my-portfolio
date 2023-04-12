@@ -4,7 +4,7 @@ import SkillBar from "../components/skills/SkillBar";
 
 function Skills() {
   return (
-    <Page className="min-w-screen overflow-y-hidden bg-zinc-800 pt-20">
+    <Page className="min-w-screen overflow-y-hidden bg-zinc-800 pt-24">
       <div className="mx-5 md:mx-7 text-white md:w-1/2">
         <h1 className="text-4xl font-bold mb-3">My skills</h1>
         <p className="text-lg text-zinc-200 mb-1">
@@ -14,8 +14,7 @@ function Skills() {
           I've tried to rate my skills as honestly as possible. I am still
           learning and I believe you are never truly perfect at something.
           However, I always strive to be and my ambition is of course to improve
-          these skills. Click on more info for a detailed description and
-          screenshots for each project.
+          these skills.
         </p>
         {mySkills.map((skillGroup) => (
           <div className="mb-5">
