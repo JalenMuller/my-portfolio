@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter, Instagram } from "react-bootstrap-icons";
 
 function AboutMe() {
   return (
-    <Page className="flex flex-col items-center justify-start md:justify-center w-screen h-screen bg-zinc-800">
+    <Page className="flex flex-col items-center justify-start md:justify-center w-screen h-screen bg-zinc-800 pt-24">
       <div className="container bg-transparent text-white md:max-w-screen-md p-5 overflow-hidden sm:rounded-lg">
         <div className="flex justify-between items-center mb-3">
           <h1 className="text-4xl font-bold">About me</h1>

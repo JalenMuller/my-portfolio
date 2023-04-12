@@ -16,9 +16,9 @@ function Projects() {
             What are these projects for?
           </p>
           <p className="text-sm text-zinc-400 mb-5">
-            These are my personal projects. All of the projects were made for
-            fun and to showcase and improve my experience. Any code is free to
-            be used by anyone.
+            These are the personal projects I felt were worth showcasing. All of
+            the projects were made for fun and to showcase and improve my
+            experience. Any code is open-source and free to be used by anyone.
           </p>
           {/* <p className="text-sm md:text-xs text-zinc-100 leading-6 mb-5">
             <InfoCircle className="inline mr-1" />
