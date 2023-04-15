@@ -1,7 +1,7 @@
 import React from "react";
 import { Link45deg } from "react-bootstrap-icons";
 
-function Link(props: {
+function LinkComponent(props: {
   url: string;
   className?: string;
   linkClassName?: string;
@@ -23,4 +23,4 @@ function Link(props: {
   );
 }
 
-export default Link;
+export default LinkComponent;

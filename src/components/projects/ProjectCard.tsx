@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectCardFull from "./ProjectCardFull";
-import Link from "../Link";
+import LinkComponent from "../LinkComponent";
 import { ArrowRight } from "react-bootstrap-icons";
 
 function ProjectCard(props: {
@@ -27,7 +27,7 @@ function ProjectCard(props: {
         <p className="text-base md:text-sm text-center md:text-left text-zinc-400 mb-2">
           {project.shortDesc}
         </p>
-        <Link className="text-white" url={project.url} />
+        <LinkComponent className="text-white" url={project.url} />
 
         <div className="flex flex-wrap items-center gap-1 text-sm mb-3 md:mb-0 mt-2 md:mt-0">
           {project.tags.map((tag) => (

@@ -9,6 +9,7 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const userLang = navigator.language;
+
     switch (userLang) {
       case "nl" || "nl-BE":
         localStorage.setItem("lang", "nl");
@@ -18,7 +19,24 @@ function App() {
         localStorage.setItem("lang", "en");
         break;
     }
-  });
+
+    const htmlTag = document.getElementsByTagName("html")[0];
+
+    if (!localStorage.getItem("dark-mode")) {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        localStorage.setItem("dark-mode", "true");
+      } else {
+        localStorage.setItem("dark-mode", "false");
+      }
+    }
+    if (localStorage.getItem("dark-mode") === "true") {
+      htmlTag.classList.add("dark");
+    }
+  }, []);
+
   return (
     <>
       <div className="h-full">

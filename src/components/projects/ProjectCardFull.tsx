@@ -1,6 +1,6 @@
 import { X } from "react-bootstrap-icons";
 import Carousel from "../carousel/Carousel";
-import Link from "../Link";
+import LinkComponent from "../LinkComponent";
 
 function ProjectCardFull(props: {
   project: {
@@ -53,8 +53,11 @@ function ProjectCardFull(props: {
                     className="px-2 md:px-0"
                     key={project.name + "-carousel"}
                   />
-                  <div className="text-black font-semibold md:mt-10 md:text-lg">
-                    <Link url={project.url} className="justify-center" />
+                  <div className="relative mt-5 text-black font-semibold md:mt-10 md:text-lg">
+                    <LinkComponent
+                      url={project.url}
+                      className="justify-center"
+                    />
                   </div>
                 </div>
               </div>
