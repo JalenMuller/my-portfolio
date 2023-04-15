@@ -12,19 +12,21 @@ function SideBar() {
   const toggleDarkMode = () => {
     localStorage.setItem("dark-mode", `${!darkMode}`);
     setDarkMode(!darkMode);
+    window.dispatchEvent(new Event("dark-mode"));
   };
   useEffect(() => {
     if (localStorage.getItem("dark-mode") === "true") {
       setDarkMode(true);
+      window.dispatchEvent(new Event("dark-mode"));
     }
-  });
+  }, [darkMode]);
   const pageArray = Object.values(pages);
   return (
     <>
       <div className="text-center">
         <button
           onClick={toggleSidebar}
-          className="text-white bg-purple-700 hover:bg-blue-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          className="text-white bg-purple-700 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-lg px-4 py-2 dark:hover:bg-purple-800 focus:outline-none dark:focus:ring-purple-400"
           type="button"
         >
           <List />
@@ -48,14 +50,14 @@ function SideBar() {
           <X className="text-3xl md:text-2xl" />
         </button>
         <div className="py-4 overflow-y-auto">
-          <h5 className="text-lg leading-9 text-gray-500 font-semibold border-gray-300 border-b-2">
+          <h5 className="text-lg leading-9 text-gray-500 dark:text-gray-200 font-semibold border-gray-300 border-b-2">
             Navigation
           </h5>
           <ul className="space-y-2 font-medium mb-3">
             {pageArray.map((page, i) => (
               <Link to={page.url} onClick={toggleSidebar}>
                 <li
-                  className={`flex text-base items-center py-2 text-gray-600 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-200 ${
+                  className={`flex text-base items-center py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-200 ${
                     i !== pageArray.length - 1 && "border-b-2"
                   }`}
                 >
@@ -64,12 +66,12 @@ function SideBar() {
               </Link>
             ))}
           </ul>
-          <h5 className="text-lg leading-9 text-gray-500 font-semibold border-gray-300 border-b-2">
+          <h5 className="text-lg leading-9 text-gray-500 dark:text-gray-200 font-semibold border-gray-300 border-b-2">
             Settings
           </h5>
           <ul className="space-y-2 font-medium mb-3">
-            <li className="flex text-base items-centers justify-between py-2 px-1 text-gray-600 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 border-b-2 border-gray-200">
-              <span className="ml-1">Dark mode</span>
+            <li className="flex text-base items-centers justify-between py-2 px-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-b-2 border-gray-200">
+              <h5 className="ml-1">Dark mode</h5>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -78,7 +80,7 @@ function SideBar() {
                   value=""
                   className="sr-only peer"
                 />
-                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
               </label>
             </li>
           </ul>
