@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, Instagram } from "react-bootstrap-icons";
 function AboutMe() {
   return (
     <Page className="min-w-screen overflow-y-hidden bg-zinc-800 pt-24">
-      <div className="container bg-transparent text-white md:max-w-screen-md px-5 overflow-hidden sm:rounded-lg">
+      <div className="container bg-transparent text-white md:max-w-screen-md px-5 sm:rounded-lg">
         <div className="flex justify-between mb-5">
           <div>
             <h1 className="text-4xl font-bold shadow mb-2">About me</h1>

@@ -11,7 +11,7 @@ function Projects() {
         <div className="md:w-2/3">
           <h1 className="text-4xl font-bold mb-2">My projects</h1>
           <div className="mb-5">
-            <p className="text-lg text-zinc-200 mb-2">
+            <p className="text-lg text-zinc-200 dark:text-purple-500 mb-2">
               What are these projects for?
             </p>
             <p className="text-sm text-zinc-400">

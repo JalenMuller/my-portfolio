@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 function Carousel(props: { images: string[]; className?: string }) {
   const [slideNumber, setSlideNumber] = useState(0);
   const images = props.images;
@@ -16,12 +16,8 @@ function Carousel(props: { images: string[]; className?: string }) {
     }
   };
   return (
-    <div
-      id="indicators-carousel"
-      className={`relative w-full h-48 ${props?.className}`}
-      data-carousel="static"
-    >
-      <div className="relative h-56 overflow-hidden">
+    <div className={`relative w-full h-full ${props?.className}`}>
+      <div className="relative rounded-lg overflow-hidden">
         {images.map((image, i) => (
           <div
             key={i}
@@ -30,7 +26,7 @@ function Carousel(props: { images: string[]; className?: string }) {
             } duration-700 ease-in-out`}
             data-carousel-item="active"
           >
-            <img src={image} className=" rounded-lg mx-auto h-full" alt="" />
+            <img src={image} className="max-h-72 w-full" alt="" />
           </div>
         ))}
       </div>
@@ -38,12 +34,9 @@ function Carousel(props: { images: string[]; className?: string }) {
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
+        onClick={() => navigateSlides(false)}
       >
-        <span
-          className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-zinc-800/60  group-hover:bg-white/50 group-focus:ring-4 ring-2 ring-white  group-focus:outline-none"
-          onClick={() => navigateSlides(false)}
-        >
+        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-zinc-800/60  group-hover:bg-white/50 group-focus:ring-4 ring-2 ring-white  group-focus:outline-none">
           <svg
             aria-hidden="true"
             className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-100"
@@ -64,13 +57,10 @@ function Carousel(props: { images: string[]; className?: string }) {
       </button>
       <button
         type="button"
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
+        className="absolute top-0 right-0 py-auto  z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        onClick={() => navigateSlides(true)}
       >
-        <span
-          className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-zinc-800/60  group-hover:bg-white/50 group-focus:ring-4 ring-2 ring-white  group-focus:outline-none"
-          onClick={() => navigateSlides(true)}
-        >
+        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-zinc-800/60  group-hover:bg-white/50 group-focus:ring-4 ring-2 ring-white  group-focus:outline-none">
           <svg
             aria-hidden="true"
             className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-100"

@@ -13,7 +13,7 @@ function NavBar() {
         to={page.url}
         className={`${
           active ? "text-purple-500 " : "text-gray-300"
-        } text-sm rounded p-1 font-semibold hover:text-purple-500 transition`}
+        } text-sm rounded p-1 md:p-2 font-semibold hover:text-purple-500 transition`}
         key={page.name}
       >
         <LangString stringName={page.name.toLowerCase()} />
@@ -29,7 +29,7 @@ function NavBar() {
             <span className="font-black text-purple-500">Muller</span>
           </Link>
           <div className="hidden md:block flex h-full items-center md:mx-auto">
-            <div className="flex h-full  items-center space-x-4 bg-zinc-900 rounded-full px-4 border border-zinc-600">
+            <div className="flex h-full  items-center space-x-4 dark:bg-gray-900 rounded-full px-4 border border-zinc-600">
               {navLinks}
             </div>
           </div>

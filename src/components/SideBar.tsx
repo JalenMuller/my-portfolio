@@ -26,7 +26,7 @@ function SideBar() {
       <div className="text-center">
         <button
           onClick={toggleSidebar}
-          className="text-white bg-purple-700 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-lg px-4 py-2 dark:hover:bg-purple-800 focus:outline-none dark:focus:ring-purple-400"
+          className="text-white bg-purple-700 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-lg md:text-xl px-4 py-2 dark:bg-gray-900 dark:border dark:border-zinc-600 dark:hover:bg-purple-800 focus:outline-none dark:focus:ring-purple-400"
           type="button"
         >
           <List />
@@ -51,13 +51,13 @@ function SideBar() {
         </button>
         <div className="py-4 overflow-y-auto">
           <h5 className="text-lg leading-9 text-gray-500 dark:text-gray-200 font-semibold border-gray-300 border-b-2">
-            Navigation
+            <p className="ml-1">Navigation</p>
           </h5>
           <ul className="space-y-2 font-medium mb-3">
             {pageArray.map((page, i) => (
               <Link to={page.url} onClick={toggleSidebar}>
                 <li
-                  className={`flex text-base items-center py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-200 ${
+                  className={`flex text-base items-center py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 ${
                     i !== pageArray.length - 1 && "border-b-2"
                   }`}
                 >
@@ -67,7 +67,7 @@ function SideBar() {
             ))}
           </ul>
           <h5 className="text-lg leading-9 text-gray-500 dark:text-gray-200 font-semibold border-gray-300 border-b-2">
-            Settings
+            <p className="ml-1">Settings</p>
           </h5>
           <ul className="space-y-2 font-medium mb-3">
             <li className="flex text-base items-centers justify-between py-2 px-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-b-2 border-gray-200">
