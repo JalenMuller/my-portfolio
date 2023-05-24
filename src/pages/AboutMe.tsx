@@ -1,13 +1,6 @@
 import LangString from "../components/LangString";
 import Page from "../components/Page";
-import Avatar from "../images/avatar.svg";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  EnvelopeAtFill,
-} from "react-bootstrap-icons";
+import { Github, Linkedin, EnvelopeAtFill } from "react-bootstrap-icons";
 
 function AboutMe() {
   return (
@@ -35,6 +28,7 @@ function AboutMe() {
           <a
             href="mailto:jalen@jalenmuller.com"
             target="_blank"
+            rel="noreferrer"
             className="hover:text-purple-600"
           >
             <EnvelopeAtFill className="mr-4 scale-[110%]" />
@@ -42,6 +36,7 @@ function AboutMe() {
           <a
             href="https://github.com/jalenmuller"
             target="_blank"
+            rel="noreferrer"
             className="hover:text-purple-600"
           >
             <Github className="mr-4" />
@@ -49,11 +44,13 @@ function AboutMe() {
           <a
             href="https://github.com/jalenmuller"
             target="_blank"
+            rel="noreferrer"
             className="hover:text-purple-600"
           >
             <a
               href="https://www.linkedin.com/in/jalen-muller-374578277"
               target="_blank"
+              rel="noreferrer"
               className="hover:text-purple-600"
             >
               <Linkedin className="" />

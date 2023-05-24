@@ -20,12 +20,12 @@ function SideBar() {
     localStorage.setItem("lang", lang.target.value);
     window.location.reload();
   };
-  const detectClick = (e: React.MouseEvent<HTMLElement>) => {
-    const target = e.target as HTMLInputElement;
-    if (target?.id === "sidebar-container") {
-      toggleSidebar();
-    }
-  };
+  // const detectClick = (e: React.MouseEvent<HTMLElement>) => {
+  //   const target = e.target as HTMLInputElement;
+  //   if (target?.id === "sidebar-container") {
+  //     toggleSidebar();
+  //   }
+  // };
   useEffect(() => {
     if (localStorage.getItem("dark-mode") === "true") {
       setDarkMode(true);

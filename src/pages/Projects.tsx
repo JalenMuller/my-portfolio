@@ -1,7 +1,6 @@
 import Page from "../components/Page";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/projects/ProjectCard";
-import { InfoCircle } from "react-bootstrap-icons";
 import LangString from "../components/LangString";
 
 function Projects() {
