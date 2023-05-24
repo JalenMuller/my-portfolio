@@ -42,19 +42,12 @@ function AboutMe() {
             <Github className="mr-4" />
           </a>
           <a
-            href="https://github.com/jalenmuller"
+            href="https://www.linkedin.com/in/jalen-muller-374578277"
             target="_blank"
             rel="noreferrer"
             className="hover:text-purple-600"
           >
-            <a
-              href="https://www.linkedin.com/in/jalen-muller-374578277"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-purple-600"
-            >
-              <Linkedin className="" />
-            </a>
+            <Linkedin />
           </a>
         </div>
       </div>

@@ -5,7 +5,7 @@ import LangString from "../components/LangString";
 
 function Projects() {
   return (
-    <Page className="md:mx-auto w-screen h-full pt-7 pb-5">
+    <Page className="md:mx-auto min-h-screen w-screen h-full pt-7 pb-5">
       <div className="mx-5 md:mx-10 text-white">
         <div className="md:w-2/3">
           <h1 className="text-4xl text-gray-600 dark:text-white font-bold mb-2">
