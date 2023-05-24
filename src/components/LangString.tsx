@@ -5,8 +5,9 @@ export default function LangString(props: { stringName: string }) {
   const langCode: string | null = localStorage.getItem("lang");
   const returnString = lang[langCode ?? "en"][name];
   if (!returnString) {
-    console.log(`string ${name} was not found for language ${langCode}`);
-    return "";
+    console.warn(`string ${name} was not found for language ${langCode}`);
+    return null;
   }
-  return returnString;
+
+  return <span dangerouslySetInnerHTML={{ __html: returnString }} />;
 }

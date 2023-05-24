@@ -11,8 +11,8 @@ export const pages = {
     name: "Skills",
     url: "/skills",
   },
-  resume: {
-    name: "Resume",
-    url: "aboutme",
-  },
+  // resume: {
+  //   name: "Resume",
+  //   url: "/",
+  // },
 };

@@ -23,15 +23,17 @@ function SkillBar(props: { data: { title: string; rating: number } }) {
     <>
       <div className="w-80">
         <dl>
-          <dt className="text-sm font-medium ">{skill.title}</dt>
+          <dt className="text-sm font-medium text-gray-600 dark:text-gray-300">
+            {skill.title}
+          </dt>
           <dd className="flex items-center mb-3">
-            <div className="w-full bg-gray-400 rounded h-2.5 dark:bg-gray-700 mr-2">
+            <div className="w-full bg-gray-300 dark:bg-gray-400 rounded h-2.5 dark:bg-gray-700 mr-2">
               <div
                 className="bg-purple-700 h-2.5 rounded"
                 style={{ width: `${percentage}%` }}
               ></div>
             </div>
-            <span className="text-sm font-medium text-gray-300 dark:text-gray-400">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-400">
               {skill.rating}
             </span>
           </dd>

@@ -9,15 +9,17 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const userLang = navigator.language;
+    // if a preferred language is not set, set the browser language
+    if (!localStorage.getItem("lang")) {
+      switch (userLang) {
+        case "nl" || "nl-BE":
+          localStorage.setItem("lang", "nl");
+          break;
 
-    switch (userLang) {
-      case "nl" || "nl-BE":
-        localStorage.setItem("lang", "nl");
-        break;
-
-      default:
-        localStorage.setItem("lang", "en");
-        break;
+        default:
+          localStorage.setItem("lang", "en");
+          break;
+      }
     }
 
     const htmlTag = document.getElementsByTagName("html")[0];

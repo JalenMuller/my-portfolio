@@ -5,7 +5,6 @@ function Carousel(props: { images: string[]; className?: string }) {
   const images = props.images;
   const navigateSlides = (bool: boolean) => {
     if (bool) {
-      console.log(images.length);
       if (slideNumber < images.length - 1) {
         setSlideNumber(slideNumber + 1);
       }

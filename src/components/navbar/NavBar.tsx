@@ -12,8 +12,10 @@ function NavBar() {
         id={page.name}
         to={page.url}
         className={`${
-          active ? "text-purple-500 " : "text-gray-300"
-        } text-sm rounded p-1 md:p-2 font-semibold hover:text-purple-500 transition`}
+          active
+            ? "text-gray-800 dark:text-gray-900"
+            : "text-white dark:text-white"
+        } text-sm rounded p-1 md:p-2 font-semibold hover:text-purple-900 dark:hover:text-gray-800 transition`}
         key={page.name}
       >
         <LangString stringName={page.name.toLowerCase()} />
@@ -22,14 +24,19 @@ function NavBar() {
   });
   return (
     <>
-      <div className="absolute mx-auto w-full mt-4 md:max-w-7xl md:px-8 lg:px-10 bg-zinc-800">
+      <div className="mx-auto w-full pt-4  md:px-8 bg-gray-100 dark:bg-zinc-800">
         <div className="flex h-10 px-5 items-center justify-between">
-          <Link to={pages.aboutMe.url} className="text-white text-xl">
-            <span className="font-light">Jalen </span>
+          <Link
+            to={pages.aboutMe.url}
+            className="text-black dark:text-white text-xl"
+          >
+            <span className="font-semibold text-gray-600 dark:text-gray-300">
+              Jalen{" "}
+            </span>
             <span className="font-black text-purple-500">Muller</span>
           </Link>
           <div className="hidden md:block flex h-full items-center md:mx-auto">
-            <div className="flex h-full  items-center space-x-4 dark:bg-gray-900 rounded-full px-4 border border-zinc-600">
+            <div className="flex h-full bg-purple-500 dark:bg-purple-600 items-center space-x-4 dark:border-zinc-600 rounded-full px-4 border border-zinc-400">
               {navLinks}
             </div>
           </div>
